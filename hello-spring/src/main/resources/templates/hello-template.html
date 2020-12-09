@@ -1,0 +1,12 @@
+<!--thymeleaf라는 템플릿 엔진을 통해 html 코드를 바꿔줌
+thymeleaf 템플릿의 장점은 서버 없이 html 껍데기를 바로 열어볼 수 있음. Absolute path를 통해
+
+정적일 땐 변환을 해주지 않음.
+thymeleaf 템플릿 엔진은 렌더링을 거쳐 변환된 html 파일을 웹브라우저에 띄어줌
+-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<p th:text="'hello ' + ${name}">hello! empty</p>    <!--$표시는 모델에서 값을 가져옴(key값이 name인 애)-->
+</body>
+</html>
