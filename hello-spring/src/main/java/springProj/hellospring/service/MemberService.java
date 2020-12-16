@@ -1,11 +1,17 @@
 package springProj.hellospring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import springProj.hellospring.domain.Member;
 import springProj.hellospring.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * 스프링은 @Service annotation을 보고 서비스네? 하고 컨테이너에 MemberService를 등록시켜둠
+ */
+@Service
 public class MemberService {
     /**
      * Test 쉽게 : ctrl + shift + t
@@ -14,6 +20,9 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     //new로 생성하는 게 아니라 외부에서 넣어주도록.
+    //@Autowired가 있으면 너는 repository가 필요하구나 하고 컨테이너에 있는
+    //memberRepository를 넣어준다.
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
