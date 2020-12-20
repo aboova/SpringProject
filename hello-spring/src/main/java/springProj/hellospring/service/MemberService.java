@@ -11,7 +11,7 @@ import java.util.Optional;
 /**
  * 스프링은 @Service annotation을 보고 서비스네? 하고 컨테이너에 MemberService를 등록시켜둠
  */
-@Service
+//@Service
 public class MemberService {
     /**
      * Test 쉽게 : ctrl + shift + t
@@ -22,7 +22,7 @@ public class MemberService {
     //new로 생성하는 게 아니라 외부에서 넣어주도록.
     //@Autowired가 있으면 너는 repository가 필요하구나 하고 컨테이너에 있는
     //memberRepository를 넣어준다.
-    @Autowired
+    //@Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

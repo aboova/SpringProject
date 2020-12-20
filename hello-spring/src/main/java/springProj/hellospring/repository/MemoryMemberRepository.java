@@ -5,7 +5,7 @@ import springProj.hellospring.domain.Member;
 
 import java.util.*;
 
-@Repository
+//@Repository
 public class MemoryMemberRepository implements MemberRepository { //alt + enter로 methods 추가하기
 
     private static Map<Long, Member> store = new HashMap<>(); //ctrl + space롤 모듈 import,
