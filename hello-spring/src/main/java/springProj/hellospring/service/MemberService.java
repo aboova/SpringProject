@@ -2,6 +2,7 @@ package springProj.hellospring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import springProj.hellospring.domain.Member;
 import springProj.hellospring.repository.MemberRepository;
 
@@ -12,6 +13,7 @@ import java.util.Optional;
  * 스프링은 @Service annotation을 보고 서비스네? 하고 컨테이너에 MemberService를 등록시켜둠
  */
 //@Service
+@Transactional
 public class MemberService {
     /**
      * Test 쉽게 : ctrl + shift + t
